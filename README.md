@@ -4,7 +4,7 @@
 ## Установка
 1. Клонируйте репозиторий
 ```
-git clone https://github.com/Letopisnaya/pythonProject2.git
+git clone https://github.com/Letopisnaya/pythonProject3.git
 ```
 
 2. Установите зависимости 

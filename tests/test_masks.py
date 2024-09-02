@@ -10,4 +10,4 @@ def test_get_mask_card() -> None:
 
 def test_get_mask_account() -> None:
     """Тест на проверку маскирования номера счета"""
-    assert get_mask_account("73654108430135874305") == "** 4305"
+    assert get_mask_account("73654108430135874305") == "**4305"

@@ -117,3 +117,10 @@ def test_filter_by_currency(transaction_list, usd_transaction):
     assert filter_by_currency(transaction_list, "USD") == usd_transaction
 
 
+def test_transaction_descriptions(transaction_list):
+    """Функция тестирует генератор номеров карт"""
+    des = transaction_descriptions(transaction_list)
+    assert next(des) == "Перевод организации"
+    assert next(des) == "Перевод со счета на счет"
+    assert next(des) == "Перевод со счета на счет"
+    assert next(des) == "Перевод с карты на карту"

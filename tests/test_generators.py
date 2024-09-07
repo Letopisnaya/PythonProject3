@@ -110,3 +110,10 @@ def usd_transaction():
             "to": "Visa Platinum 8990922113665229",
         },
     ]
+
+
+def test_filter_by_currency(transaction_list, usd_transaction):
+    """Функция тестирует выдачу списка операций по названию валюты"""
+    assert filter_by_currency(transaction_list, "USD") == usd_transaction
+
+

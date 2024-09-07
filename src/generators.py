@@ -1,4 +1,5 @@
 def filter_by_currency(transaction_list: list, name: str) -> list:
+    """Функция выдает список трансакций с определенной валютой"""
     for transactions in transaction_list:
         new_list_transactions = list(
             filter(
@@ -10,6 +11,7 @@ def filter_by_currency(transaction_list: list, name: str) -> list:
 
 
 def transaction_descriptions(transaction_list):
+    """Функция выдает описание операций"""
     description_of_transactions = ""
     for transact in transaction_list:
         description_of = transact["description"]
@@ -20,6 +22,7 @@ def transaction_descriptions(transaction_list):
 
 
 def card_number_generator(start: int, end: int) -> str:
+    """Функция генерирует номера карт"""
     for number in range(start, end + 1):
         card_number = str(number)
         while len(card_number) < 16:

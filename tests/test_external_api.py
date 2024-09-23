@@ -40,10 +40,6 @@ def test_get_amount_rub(transaction_fix_rub):
     assert get_amount(transaction_fix_rub) == "48223.05"
 
 
-def test_get_amount(transaction_fix):
-    assert get_amount(transaction_fix) == 272039.325039
-
-
 @patch("requests.get")
 def test_get_amount_mock(mock_get, transaction_fix):
     mock_get.return_value.json.return_value = {

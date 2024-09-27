@@ -1,6 +1,5 @@
 import logging
 
-
 # Создаем основные конфигурации logging
 logging.basicConfig(
     level=logging.DEBUG,
@@ -29,10 +28,10 @@ def get_mask_card_number(card_number: str) -> str:
 def get_mask_account(mask_number: str) -> str:
     """Функция маскировки счета"""
     mask_account_logger.info("Ввод номера счета")
-    if len(account_number) < 20:
+    if len(mask_number) < 20:
         mask_account_logger.error("Недостаточное количество цифр")
         return "Ошибка: проверьте количество вводимых цифр"
     else:
-        mask_account = f"**{account_number[-4:]}"
+        mask_account = f"**{mask_number[-4:]}"
         mask_account_logger.info("Маскировка номера счета")
     return mask_account

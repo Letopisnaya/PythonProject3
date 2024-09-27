@@ -25,3 +25,6 @@ def transaction_read_exsel(join_path_exc):
     except FileNotFoundError:
         transactions = []
         return transactions
+
+print(transaction_read_csv(join_path_csv))
+print(transaction_read_exsel(join_path_exc))

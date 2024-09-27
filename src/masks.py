@@ -12,6 +12,7 @@ logging.basicConfig(
 card_number_logger = logging.getLogger("app.card_number")
 mask_account_logger = logging.getLogger("app.mask_account")
 
+
 def get_mask_card_number(card_number: str) -> str:
     """Функция скрытия номера карты"""
     card_number_logger.info("Ввод номера карты")
@@ -19,11 +20,10 @@ def get_mask_card_number(card_number: str) -> str:
         card_number_logger.error("Недостаточное количество цифр")
         return "Ошибка: проверьте количество вводимых цифр"
     else:
-        mask_card_number = (
-            f"{card_number[:4]} {card_number[4:6]}** **** {card_number[-4:]}"
-        )
+        mask_card_number = f"{card_number[:4]} {card_number[4:6]}** **** {card_number[-4:]}"
     card_number_logger.info("Маскировка номера карты")
     return mask_card_number
+
 
 def get_mask_account(mask_number: str) -> str:
     """Функция маскировки счета"""

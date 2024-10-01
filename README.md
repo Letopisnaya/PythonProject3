@@ -20,10 +20,12 @@ pip install -r requirements.txt
 5. Модуль utils принимает путь к JSON файлу и возвращает список словарей с транзакциями
 6. Модуль external_api принимает на вход транзакцию, конвертирует сумму в рубли и возвращает сумму транзакции
 7. Модуль csv_exsel считывает финансовые операции из CSV- и XLSX-файлов
+8. Модуль search_bar фильтрует список операций по описанию и считает количество операций по каждой категории
+9. Модуль main запускает приложение
 
 ## Тестирование
 Для тестирования запустите модули  test_masks.py, test_processing.py, test_widget.py, test_generators.py,
-test_decorators.py, test_external_api, test_utils из директории tests
+test_decorators.py, test_external_api, test_utils, test_search_bar из директории tests
 
 ## Документация
 Для подробной документации обратитесь к [документации](docs/README.md)

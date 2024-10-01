@@ -32,7 +32,3 @@ def transaction_read_excel(join_path_exc):
         return transaction_excel
     except FileNotFoundError:
         return []
-
-
-print(transaction_read_csv(join_path_csv))
-print(transaction_read_excel(join_path_exc))

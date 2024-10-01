@@ -33,7 +33,7 @@ def transaction_read_csv(join_path_csv):
 def transaction_read_exsel(join_path_exc):
     """Функция принимает на вход путь до файла escel и возвращает список словарей с транзакциями"""
     try:
-        transaction_excel = pd.read_excel(join_path_exc)
+        transaction_excel = pd.read_excel(join_path_exc).to_dict("records")
         return transaction_excel
     except FileNotFoundError:
         transactions = []

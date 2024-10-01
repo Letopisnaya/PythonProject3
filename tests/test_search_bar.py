@@ -63,7 +63,4 @@ def count_decript_dict():
 
 def test_count_description(trans_list, count_decript_dict):
     """Тест проверяет работу функции по подсчету количества категорий по описанию"""
-    assert (
-        count_description(trans_list, ["Перевод организации", "Открытие вклада"])
-        == count_decript_dict
-    )
+    assert count_description(trans_list, ["Перевод организации", "Открытие вклада"]) == count_decript_dict

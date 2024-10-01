@@ -1,5 +1,7 @@
 import os
+
 import pytest
+
 from src.utils import file_opening
 
 

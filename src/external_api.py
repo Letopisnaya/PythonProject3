@@ -7,6 +7,7 @@ load_dotenv()
 
 API_KEY = os.getenv("API_KEY")
 
+
 def get_amount(transaction: dict) -> float:
     """Функция принимает на вход транзакцию, конвертирует сумму в рубли и возвращает сумму транзакции"""
     amount = transaction["operationAmount"]["amount"]
